@@ -9,24 +9,193 @@
     <link href="https://fonts.googleapis.com/css2?family=Kablammo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="lab1.css">
     <link rel="stylesheet" href="lunch.css">
-
-    <h1>Food Construct</h1>
+</head>
+<body>
+    <header>
+        <h1>Food Construct</h1>
     <nav>
-        <a href="#">О нас</a>
-        <a href="#">Собрать ланч</a>
+        <a href="lab1.html" class="active">О нас</a>
+        <a href="lunch.html">Собрать ланч</a>
         <a href="#">Заказы</a>
         <a href="#contacts">Контакты</a>
     </nav>
-</head>
-<body>
+    </header>
     <main>
         <section>
-            <h2>Выберите суп</h2>
-            <div>
-                <div>
-
+            <h2>Супы</h2>
+            <div class="dishes">
+                <div class="dish">
+                    <img src="vebTabakar/sup1.jpg" alt="Гаспачо">
+                    <p class="dish__price">195 ₽</p>
+                    <p class="dish__name">Гаспачо</p>
+                    <p class="dish__weight">350 г</p>
+                    <button class="dish__btn" type="button">Добавить</button>
+                </div>
+                <div class="dish">
+                    <img src="vebTabakar/sup2.jpg" alt="Грибной суп-пюре">
+                    <p class="dish__price">185 ₽</p>
+                    <p class="dish__name">Грибной суп-пюре</p>
+                    <p class="dish__weight">330 г</p>
+                    <button class="dish__btn" type="button">Добавить</button>
+                </div>
+                <div class="dish">
+                    <img src="vebTabakar/sup3.jpg" alt="Норвежский суп">
+                    <p class="dish__price">270 ₽</p>
+                    <p class="dish__name">Норвежский суп</p>
+                    <p class="dish__weight">330 г</p>
+                    <button class="dish__btn" type="button">Добавить</button>
                 </div>
             </div>
+        </section>
+        <section>
+            <h2>Основные блюда</h2>
+            <div class="dishes">
+                <div class="dish">
+                    <img src="vebTabakar/dish1.jpg" alt="Жареная картошка с грибами">
+                    <p class="dish__price">150 ₽</p>
+                    <p class="dish__name">Жареная картошка с грибами</p>
+                    <p class="dish__weight">250 г</p>
+                    <button class="dish__btn" type="button">Добавить</button>
+                </div>
+                <div class="dish">
+                    <img src="vebTabakar/dish2.jpg" alt="Лазанья">
+                    <p class="dish__price">395 ₽</p>
+                    <p class="dish__name">Лазанья</p>
+                    <p class="dish__weight">310 г</p>
+                    <button class="dish__btn" type="button">Добавить</button>
+                </div>
+                <div class="dish">
+                    <img src="vebTabakar/dish3.jpg" alt="Котлеты из курицы с картофельным пюре">
+                    <p class="dish__price">225 ₽</p>
+                    <p class="dish__name">Котлеты из курицы с картофельным пюре</p>
+                    <p class="dish__weight">280 г</p>
+                    <button class="dish__btn" type="button">Добавить</button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Напитки</h2>
+            <div class="dishes">
+                <div class="dish">
+                    <img src="vebTabakar/sok1.jpg" alt="Апельсиновый сок">
+                    <p class="dish__price">120 ₽</p>
+                    <p class="dish__name">Апельсиновый сок</p>
+                    <p class="dish__weight">300 мл г</p>
+                    <button class="dish__btn" type="button">Добавить</button>
+                </div>
+                <div class="dish">
+                    <img src="vebTabakar/sok2.jpg" alt="Яблочный сок">
+                    <p class="dish__price">90 ₽</p>
+                    <p class="dish__name">Яблочный сок</p>
+                    <p class="dish__weight">300 мл</p>
+                    <button class="dish__btn" type="button">Добавить</button>
+                </div>
+                <div class="dish">
+                    <img src="vebTabakar/sok3.jpg" alt="Морковный сок">
+                    <p class="dish__price">110 ₽</p>
+                    <p class="dish__name">Морковный сок</p>
+                    <p class="dish__weight">300 мл</p>
+                    <button class="dish__btn" type="button">Добавить</button>
+                </div>
+            </div>
+        </section>
+        <section class="order-section">
+            <h2>Сделать заказ</h2>
+            <form action="https://httpbin.org/post" method="POST" class="order-form">
+                <div class="form-column">
+                    <h3>Ваш заказ</h3>
+                    <div class="form-group">
+                        <label for="soup-select">Суп</label>
+                        <select id="soup-select" name="soup" required>
+                            <option value="" selected>-- Выберите суп --</option>
+                            <option value="gaspacho">Гаспачо</option>
+                            <option value="mushroom_soup">Грибной суп-пюре</option>
+                            <option value="norwegian_soup">Норвежский суп</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="main-dish-select">Главное блюдо</label>
+                        <select id="main-dish-select" name="main_dish" required>
+                            <option value="" selected>-- Выберите главное блюдо --</option>
+                            <option value="fried_potatoes">Жареная картошка с грибами</option>
+                            <option value="lasagna">Лазанья</option>
+                            <option value="chicken_cutlets">Котлеты из курицы с картофельным пюре</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="drink-select">Напиток</label>
+                        <select id="drink-select" name="drink" required>
+                            <option value="" selected>-- Выберите напиток --</option>
+                            <option value="orange_juice">Апельсиновый сок</option>
+                            <option value="apple_juice">Яблочный сок</option>
+                            <option value="carrot_juice">Морковный сок</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="comment">Комментарии к заказу</label>
+                        <textarea id="comment" name="comment" rows="6"></textarea>
+                    </div>
+                </div>
+
+                <!-- ПРАВАЯ КОЛОНКА -->
+                <div class="form-column">
+                    <h3>Ваши данные</h3>
+
+                    <div class="form-group">
+                        <label for="username">Имя</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group form-group--checkbox">
+                        <input type="checkbox" id="subscribe" name="subscribe" checked>
+                        <label for="subscribe">Получать информацию о скидках и акциях</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Номер телефона</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Адрес доставки</label>
+                        <input type="text" id="address" name="address" required>
+                        <span class="field-hint">Доставка осуществляется только по Москве</span>
+                    </div>
+
+                    <fieldset class="delivery-fieldset">
+                        <legend>Время доставки:</legend>
+
+                        <div class="radio-group">
+                            <input type="radio" id="time-asap" name="delivery_option" value="asap" checked required>
+                            <label for="time-asap">Как можно скорее</label>
+                        </div>
+
+                        <div class="radio-group">
+                            <input type="radio" id="time-specific" name="delivery_option" value="specific_time">
+                            <label for="time-specific">К указанному времени</label>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-group">
+                        <label for="delivery-time">Укажите время доставки</label>
+                        <input type="time" id="delivery-time" name="delivery_time" min="07:00" max="23:00" step="300">
+                        <span class="field-hint">Доступное время доставки с 7:00 до 23:00</span>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="reset" class="btn">Сбросить</button>
+                        <button type="submit" class="btn">Отправить</button>
+                    </div>
+                </div>
+            </form>
         </section>
     </main>
 <footer id="contacts">

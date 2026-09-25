@@ -2,11 +2,20 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     font-family: 'Kablammo', cursive;
     background-color: #e8b0c2;
     color: #4b4b20;
-
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}main{
+    flex: 1;
 }
 
 header, main, footer, nav {
@@ -44,8 +53,12 @@ li {
     margin-bottom: 8px;
 }
 img {
-    width: 1050px;
-    height: 500px;
+    width: 100%;
+    height: auto;
+}
+.about-img {
+    width: 1100px;
+    height: 600px;
 }
 
 table {
@@ -59,13 +72,23 @@ th, td {
     border: 1px solid #4b4b20;
     text-align: left;
 }
-
+nav {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+    padding: 10px;
+}
 nav a {
     text-decoration: none;
     font-family: 'Fredericka the Great', cursive;
     font-size: 24px;
     color: #4b4b20;
     margin-right: 20px;
+}
+nav a.active {
+    color: magenta;
 }
 
 nav a:hover {
@@ -83,4 +106,35 @@ footer a {
 }
 footer a:hover {
     color: rgb(255, 0, 162);
+}
+
+@media (max-width: 800px) {
+    .about-img {
+        width: 500px;
+    }
+    nav {
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav a {
+        font-size: 28px;
+    }
+    .about-img {
+        width: 100%;
+    }
+    table td, table th {
+        font-size: 20px; 
+    }
+}
+
+@media (max-width: 400px) {
+    table td, table th {
+        font-size: 18px; 
+    }
 }
