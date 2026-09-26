@@ -20,6 +20,7 @@
 .dish:hover .dish__btn {
     background-color: green;
     color: white;
+
 }
 .dish > img {
     width: 100%;
@@ -50,8 +51,9 @@
     cursor: pointer;
     border: none;
     margin-top: 15px;
+    margin: 0 auto;
     align-self: flex-start;
-    font-family: 'Fredericka the Great', cursive;
+    font-family: 'Kablammo', cursive;
     font-size: 16px;
     transition: background-color 0.3s, color 0.3s;
 }
@@ -178,6 +180,16 @@
     .dishes {
         grid-template-columns: repeat(2, 1fr);
     }
+    .order-form {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .form-column {
+        width: 100%;
+        max-width: 350px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -200,17 +212,5 @@
 
     .dishes {
         grid-template-columns: 1fr;
-    }
-}
-@media (max-width: 800px) {
-    .order-form {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-    }
-    
-    .form-column {
-        width: 100%;
-        max-width: 350px;
     }
 }

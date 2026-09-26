@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kablammo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lab1.css">
+    <link rel="stylesheet" href="lunch.css">
+</head>
+ <header>
+        <h1>Food Construct</h1>
+    <nav>
+        <a href="lab1.html">О нас</a>
+        <a href="lunch.html">Собрать ланч</a>
+        <a href="#">Заказы</a>
+        <a href="back.html" class="active">Обратная связь</a>
+        <a href="enter.html">Вход</a>
+        <a href="#contacts">Контакты</a>
+    </nav>
+    </header>
+<body>
+    <main>
+        <section class="order-section">
+            <h2></h2>
+            <form action="https://httpbin.org/post" method="POST" class="order-form" enctype="multipart/form-data">
+                <div class="form-column">
+                    <h3>Ваши данные</h3>
+
+                    <div class="form-group">
+                        <label for="username">Имя</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="type-obrashenia">Тип обращения</label>
+                        <select id="type-obrashenia" name="obrashenia" required>
+                            <option value="" selected>Зачем?</option>
+                            <option value="zhaloba">Жалоба</option>
+                            <option value="predlozhenie">Предложение</option>
+                        </select>
+                    </div>
+
+                    <fieldset class="know-fieldset">
+                        <legend>Откуда узнали о нас?</legend>
+                        <div class="radio-group">
+                            <input type="radio" id="reclama" name="knopka" value="reclama">
+                            <label for="reclama">Реклама</label>
+                        </div>
+                        <div class="radio-group">
+                            <input type="radio" id="friends" name="knopka" value="asap" checked required>
+                            <label for="time-asap">Рассказали друзья</label>
+                        </div>
+                        <div class="radio-group">
+                            <input type="radio" id="time-asap" name="knopka" value="asap">
+                            <label for="time-asap">Запрос в интернете</label>
+                        </div>
+                        </fieldset>
+                        <div class="form-group">
+                            <label for="comment">Текст сообщения</label>
+                            <textarea id="comment" name="comment" rows="6"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="file">Выберите вложение</label>
+                            <input type="file" id="file" name="file">
+                        </div>
+                        <div class="form-group form-group--checkbox">
+                            <input type="checkbox" id="yes" name="yes" checked>
+                            <label for="yes">Даю согласие на обработку персональных данных</label>
+                        </div>
+                        <div class="form-actions">
+                            <button type="reset" class="btn">Сбросить</button>
+                            <button type="submit" class="btn">Отправить</button>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </section>
+
+    </main>
+    <footer id="contacts">
+        <p>Позвонить нам <a href="tel:+70000000000">+7-000-000-00-00</a></p>
+    </footer>
+</body>
+</html>
