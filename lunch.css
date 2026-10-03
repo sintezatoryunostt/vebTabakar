@@ -127,7 +127,7 @@
     font-size: 15px;
 }
 .field-hint {
-    font-style: italic;
+    font-style: 'Kablammo';
     font-size: 14px;
     color: #000;
     margin-top: 4px;
@@ -212,5 +212,22 @@
 
     .dishes {
         grid-template-columns: 1fr;
+    }
+}
+@media print{
+    header, footer, button {
+        display: none;
+    }
+    img, table {
+        break-inside: avoid;
+    }
+
+    * {
+        filter: none !important;
+        box-shadow: none;
+        text-shadow: none;
+    }
+    .dish{
+        border: 1px solid green;
     }
 }
