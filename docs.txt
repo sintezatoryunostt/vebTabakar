@@ -1,1 +1,2 @@
-https://sintezatoryunostt.github.io/vebTabakar/lab1.html -- сайт на момент лабы 3
+
+https://sintezatoryunostt.github.io/vebTabakar/ -- последняя версия сайта
