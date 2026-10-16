@@ -25,81 +25,15 @@
     <main>
         <section>
             <h2>Супы</h2>
-            <div class="dishes">
-                <div class="dish">
-                    <img src="vebTabakar/sup1.jpg" alt="Гаспачо">
-                    <p class="dish__price">195 ₽</p>
-                    <p class="dish__name">Гаспачо</p>
-                    <p class="dish__weight">350 г</p>
-                    <button class="dish__btn" type="button">Добавить</button>
-                </div>
-                <div class="dish">
-                    <img src="vebTabakar/sup2.jpg" alt="Грибной суп-пюре">
-                    <p class="dish__price">185 ₽</p>
-                    <p class="dish__name">Грибной суп-пюре</p>
-                    <p class="dish__weight">330 г</p>
-                    <button class="dish__btn" type="button">Добавить</button>
-                </div>
-                <div class="dish">
-                    <img src="vebTabakar/sup3.jpg" alt="Норвежский суп">
-                    <p class="dish__price">270 ₽</p>
-                    <p class="dish__name">Норвежский суп</p>
-                    <p class="dish__weight">330 г</p>
-                    <button class="dish__btn" type="button">Добавить</button>
-                </div>
-            </div>
+            <div class="dishes" data-dish="soup"></div>
         </section>
         <section>
             <h2>Основные блюда</h2>
-            <div class="dishes">
-                <div class="dish">
-                    <img src="vebTabakar/dish1.jpg" alt="Жареная картошка с грибами">
-                    <p class="dish__price">150 ₽</p>
-                    <p class="dish__name">Жареная картошка с грибами</p>
-                    <p class="dish__weight">250 г</p>
-                    <button class="dish__btn" type="button">Добавить</button>
-                </div>
-                <div class="dish">
-                    <img src="vebTabakar/dish2.jpg" alt="Лазанья">
-                    <p class="dish__price">395 ₽</p>
-                    <p class="dish__name">Лазанья</p>
-                    <p class="dish__weight">310 г</p>
-                    <button class="dish__btn" type="button">Добавить</button>
-                </div>
-                <div class="dish">
-                    <img src="vebTabakar/dish3.jpg" alt="Котлеты из курицы с картофельным пюре">
-                    <p class="dish__price">225 ₽</p>
-                    <p class="dish__name">Котлеты из курицы с картофельным пюре</p>
-                    <p class="dish__weight">280 г</p>
-                    <button class="dish__btn" type="button">Добавить</button>
-                </div>
-            </div>
+            <div class="dishes" data-dish="mainDish"></div>   
         </section>
         <section>
             <h2>Напитки</h2>
-            <div class="dishes">
-                <div class="dish">
-                    <img src="vebTabakar/sok1.jpg" alt="Апельсиновый сок">
-                    <p class="dish__price">120 ₽</p>
-                    <p class="dish__name">Апельсиновый сок</p>
-                    <p class="dish__weight">300 мл г</p>
-                    <button class="dish__btn" type="button">Добавить</button>
-                </div>
-                <div class="dish">
-                    <img src="vebTabakar/sok2.jpg" alt="Яблочный сок">
-                    <p class="dish__price">90 ₽</p>
-                    <p class="dish__name">Яблочный сок</p>
-                    <p class="dish__weight">300 мл</p>
-                    <button class="dish__btn" type="button">Добавить</button>
-                </div>
-                <div class="dish">
-                    <img src="vebTabakar/sok3.jpg" alt="Морковный сок">
-                    <p class="dish__price">110 ₽</p>
-                    <p class="dish__name">Морковный сок</p>
-                    <p class="dish__weight">300 мл</p>
-                    <button class="dish__btn" type="button">Добавить</button>
-                </div>
-            </div>
+            <div class="dishes" data-dish="drink"></div>
         </section>
         <section class="order-section">
             <h2>Сделать заказ</h2>
@@ -107,34 +41,30 @@
                 <div class="form-column">
                     <h3>Ваш заказ</h3>
                     <div class="form-group">
-                        <label for="soup-select">Суп</label>
-                        <select id="soup-select" name="soup" required>
-                            <option value="" selected>-- Выберите суп --</option>
-                            <option value="gaspacho">Гаспачо</option>
-                            <option value="mushroom_soup">Грибной суп-пюре</option>
-                            <option value="norwegian_soup">Норвежский суп</option>
-                        </select>
+                        <p class="order-empty" id="order-empty">Ничего не выбрано</p></div>
+                    <div class="order-content" id="order-content" hidden>
+                        <div class="order-category">
+                            <p class="order-category_tittle">Суп</p>
+                            <p class="order-item empty" id="soup" data-empty="Блюдо не выбрано">Блюдо не выбрано</p>
+                        </div>
+                        <div class="order-category">
+                            <p class="order-category_tittle">Основное блюдо</p>
+                            <p class="order-item empty" id="mainDish" data-empty="Блюдо не выбрано">Блюдо не выбрано</p>
+                        </div>
+                        <div class="order-category">
+                            <p class="order-category_tittle">Напиток</p>
+                            <p class="order-item empty" id="drink" data-empty="Блюдо не выбрано">Блюдо не выбрано</p>
+                        </div>
+                        <div class="order-total" id="costBlock">
+                            <p class="order-total__title">Стоимость заказа</p>
+                            <p class="order-total__value"><span id="cost">0</span> ₽</p>
+                        </div>
                     </div>
 
-                    <div class="form-group">
-                        <label for="main-dish-select">Главное блюдо</label>
-                        <select id="main-dish-select" name="main_dish" required>
-                            <option value="" selected>-- Выберите главное блюдо --</option>
-                            <option value="fried_potatoes">Жареная картошка с грибами</option>
-                            <option value="lasagna">Лазанья</option>
-                            <option value="chicken_cutlets">Котлеты из курицы с картофельным пюре</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="drink-select">Напиток</label>
-                        <select id="drink-select" name="drink" required>
-                            <option value="" selected>-- Выберите напиток --</option>
-                            <option value="orange_juice">Апельсиновый сок</option>
-                            <option value="apple_juice">Яблочный сок</option>
-                            <option value="carrot_juice">Морковный сок</option>
-                        </select>
-                    </div>
+                    <input type="hidden" name="soup" id="hidden-soup">
+                    <input type="hidden" name="main_dish" id="hidden-main">
+                    <input type="hidden" name="drink" id="hidden-drink">
+                    <input type="hidden" name="total" id="hidden-total">
 
                     <div class="form-group">
                         <label for="comment">Комментарии к заказу</label>
@@ -202,5 +132,16 @@
 <footer id="contacts">
     <p>Позвонить нам <a href="tel:+70000000000">+7-000-000-00-00</a></p>
 </footer>
+<template id="template">
+    <div class="dish card_out" data-dish="">
+        <img src="" alt="">
+        <p class="dish__price cost"></p>
+        <p class="dish__name long_t"></p>
+        <p class="dish__weight weight"></p>
+        <button class="dish__btn append" type="button">Добавить</button>
+    </div>
+</template>
+
+    <script src="script.js"></script>
 </body>
 </html>

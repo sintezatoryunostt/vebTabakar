@@ -176,6 +176,72 @@
     background-color: #f0f0f0;
 }
 
+.order-empty {
+    color: #000000;
+    font-style: italic;
+    margin: 12px 0;
+    font-size: 16px;
+}
+
+.order-content {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 14px;
+}
+
+.order-category {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.order-category_tittle {
+    margin: 0 0 4px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #4b4b20;
+    letter-spacing: 0.3px;
+}
+
+.order-item {
+    margin: 0;
+    font-size: 16px;
+}
+
+.order-item.empty {
+    color: #000000;
+    font-style: italic;
+}
+.order-content[hidden] {
+    display: none;
+}
+
+
+.order-item.filled {
+    color: #000;
+    font-weight: 500;
+}
+
+.order-total {
+    margin-top: 10px;
+    padding-top: 12px;
+    border-top: 2px solid #4b4b20;
+}
+
+.order-total__title {
+    margin: 0 0 4px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
+.order-total__value {
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+    color: #4b4b20;
+}
+
 @media (max-width: 800px) {
     .dishes {
         grid-template-columns: repeat(2, 1fr);
