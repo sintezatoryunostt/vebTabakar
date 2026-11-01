@@ -25,14 +25,46 @@
     <main>
         <section>
             <h2>Супы</h2>
+            <div class="filters">
+                <button class="filter-btn" data-kind="fish">Рыбный</button>
+                <button class="filter-btn" data-kind="meat">Мясной</button>
+                <button class="filter-btn" data-kind="veg">Вегетарианский</button>
+            </div>
             <div class="dishes" data-dish="soup"></div>
         </section>
         <section>
             <h2>Основные блюда</h2>
+            <div class="filters">
+                <button class="filter-btn" data-kind="fish">Рыбное</button>
+                <button class="filter-btn" data-kind="meat">Мясное</button>
+                <button class="filter-btn" data-kind="veg">Вегетарианское</button>
+            </div>
             <div class="dishes" data-dish="mainDish"></div>   
         </section>
         <section>
+            <h2>Салаты и закуски</h2>
+            <div class="filters">
+                <button class="filter-btn" data-kind="fish">Рыбный</button>
+                <button class="filter-btn" data-kind="meat">Мясной</button>
+                <button class="filter-btn" data-kind="veg">Вегетарианский</button>
+            </div>
+            <div class="dishes" data-dish="salads"></div>
+        </section>
+        <section>
+            <h2>Десерты</h2>
+            <div class="filters">
+                <button class="filter-btn" data-kind="small">Маленькая порция</button>
+                <button class="filter-btn" data-kind="medium">Средняя порция</button>
+                <button class="filter-btn" data-kind="large">Большая порция</button>
+            </div>
+            <div class="dishes" data-dish="desserts"></div>
+        </section>
+        <section>
             <h2>Напитки</h2>
+            <div class="filters">
+                <button class="filter-btn" data-kind="cold">Холодный</button>
+                <button class="filter-btn" data-kind="hot">Горячий</button>
+            </div>
             <div class="dishes" data-dish="drink"></div>
         </section>
         <section class="order-section">
@@ -51,6 +83,14 @@
                             <p class="order-category_tittle">Основное блюдо</p>
                             <p class="order-item empty" id="mainDish" data-empty="Блюдо не выбрано">Блюдо не выбрано</p>
                         </div>
+                         <div class="order-category">
+                            <p class="order-category_tittle">Салат или стартер</p>
+                            <p class="order-item empty" id="salads" data-empty="Блюдо не выбрано">Блюдо не выбрано</p>
+                        </div>
+                        <div class="order-category">
+                            <p class="order-category_tittle">Десерт</p>
+                            <p class="order-item empty" id="desserts" data-empty="Блюдо не выбрано">Блюдо не выбрано</p>
+                        </div>
                         <div class="order-category">
                             <p class="order-category_tittle">Напиток</p>
                             <p class="order-item empty" id="drink" data-empty="Блюдо не выбрано">Блюдо не выбрано</p>
@@ -63,6 +103,8 @@
 
                     <input type="hidden" name="soup" id="hidden-soup">
                     <input type="hidden" name="main_dish" id="hidden-main">
+                    <input type="hidden" name="salads" id="hidden-salads">
+                    <input type="hidden" name="desserts" id="hidden-desserts">
                     <input type="hidden" name="drink" id="hidden-drink">
                     <input type="hidden" name="total" id="hidden-total">
 

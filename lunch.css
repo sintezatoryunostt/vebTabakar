@@ -11,8 +11,15 @@
     border-radius: 35px;
     background-color: #ffffff;
     cursor: pointer;
-    filter: drop-shadow(17px 19px 24px rgb(54, 83, 56));}
-
+    filter: drop-shadow(17px 19px 24px rgb(54, 83, 56));
+    border: 2px solid transparent;
+}
+.dish.selected {
+    border: 10px solid rgb(108, 16, 70);
+}
+.dish.selected:hover{
+    border: 10px solid rgb(108,16,70);
+}
 .dish:hover {
     border: 2px solid green;
 }
@@ -241,6 +248,38 @@
     font-weight: bold;
     color: #4b4b20;
 }
+.filters {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background-color: #f1eee9;
+    border: 1px solid #767676;
+    padding: 8px 20px;
+    border-radius: 30px; 
+    cursor: pointer;
+    font-size: 15px;
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: #e0ddd8;
+}
+
+.filter-btn.active {
+    background-color: green;
+    color: white;
+    border-color: green;
+}
+
+.card_out.hidden-filter {
+    display: none !important;
+}
+
 
 @media (max-width: 800px) {
     .dishes {
