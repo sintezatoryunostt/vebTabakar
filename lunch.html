@@ -23,6 +23,44 @@
     </nav>
     </header>
     <main>
+        <section class="lunch-variants">
+            <h2>Доступные варианты ланчей</h2>
+            <div class="lunch-variants__grid">
+                
+                <div class="lunch-variant">
+                    <div class="variant-item"><img src="vebTabakar/supicon.jpg" alt="Суп"><p>Суп</p></div>
+                    <div class="variant-item"><img src="vebTabakar/maindishicon.png" alt="Блюдо"><p>Главное блюдо</p></div>
+                    <div class="variant-item"><img src="vebTabakar/saladicon.jpg" alt="Салат"><p>Салат</p></div>
+                    <div class="variant-item"><img src="vebTabakar/sokicon.jpg" alt="Напиток"><p>Напиток</p></div>
+                </div>
+                
+                <div class="lunch-variant">
+                    <div class="variant-item"><img src="vebTabakar/supicon.jpg" alt="Суп"><p>Суп</p></div>
+                    <div class="variant-item"><img src="vebTabakar/maindishicon.png" alt="Блюдо"><p>Главное блюдо</p></div>
+                    <div class="variant-item"><img src="vebTabakar/sokicon.jpg" alt="Напиток"><p>Напиток</p></div>
+                </div>
+                
+                <div class="lunch-variant">
+                    <div class="variant-item"><img src="vebTabakar/supicon.jpg" alt="Суп"><p>Суп</p></div>
+                    <div class="variant-item"><img src="vebTabakar/saladicon.jpg" alt="Салат"><p>Салат</p></div>
+                    <div class="variant-item"><img src="vebTabakar/sokicon.jpg" alt="Напиток"><p>Напиток</p></div>
+                </div>
+        
+                <div class="lunch-variant">
+                    <div class="variant-item"><img src="vebTabakar/maindishicon.png" alt="Блюдо"><p>Главное блюдо</p></div>
+                    <div class="variant-item"><img src="vebTabakar/saladicon.jpg" alt="Салат"><p>Салат</p></div>
+                    <div class="variant-item"><img src="vebTabakar/sokicon.jpg" alt="Напиток"><p>Напиток</p></div>
+                </div>
+                
+                <div class="lunch-variant">
+                    <div class="variant-item"><img src="vebTabakar/maindishicon.png" alt="Блюдо"><p>Главное блюдо</p></div>
+                    <div class="variant-item"><img src="vebTabakar/sokicon.jpg" alt="Напиток"><p>Напиток</p></div>
+                </div>
+            </div>
+            <p class="lunch-variants__note">
+                Десерт можно добавить в любой вид ланча.
+            </p>
+        </section>
         <section>
             <h2>Супы</h2>
             <div class="filters">
@@ -174,6 +212,7 @@
 <footer id="contacts">
     <p>Позвонить нам <a href="tel:+70000000000">+7-000-000-00-00</a></p>
 </footer>
+<div id="notification-container"></div>
 <template id="template">
     <div class="dish card_out" data-dish="">
         <img src="" alt="">
@@ -183,7 +222,7 @@
         <button class="dish__btn append" type="button">Добавить</button>
     </div>
 </template>
-
+    <script src="dishmassive.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
